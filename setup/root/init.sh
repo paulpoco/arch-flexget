@@ -37,16 +37,6 @@ else
 
 fi
 
-# Check if config.yml exists. If not, copy in
-if [ -f /config/config.yml ]; then
-  echo "Using existing config file."
-else
-  echo "Creating config.yml from template."
-  cp /root/config.yml  /config/config.yml
-  chown nobody:users /config/config.yml
-  chmod +x /config/config.yml
-fi
-
 # set permissions inside container
 chown -R "${PUID}":"${PGID}" /config
 chmod -R 775 /home/nobody /config
