@@ -1,12 +1,9 @@
-web_server:
-  bind: 0.0.0.0
-  port: 3539
-  web_ui: yes
+web_server: 3539
 
 tasks:
  task name:
-    rss: http://example.com/torrents.xml
+    rss: http://example.opensourcetv.com/torrents.xml
     series:
-      - pioneer one
-      - some series
+      - Open Source TV Show 1
+      - Open Source TV Show 2
     download: /config
