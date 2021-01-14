@@ -6,8 +6,8 @@ set -e
 # define aur helper
 aur_helper="packer"
 
-# define aur packages
-aur_packages="python2 python2-pip"
+# define aur packages should default to Python 3.x
+aur_packages="python python-pip"
 
 # create "makepkg-user" user for makepkg
 useradd -m -s /bin/bash makepkg-user
