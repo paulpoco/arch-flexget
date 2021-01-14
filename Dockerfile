@@ -1,17 +1,17 @@
 FROM binhex/arch-base
 MAINTAINER none
 
-# add supervisor conf file for app ###change from setup to build folder later###
-ADD setup/*.conf /etc/supervisor/conf.d/
+# add supervisor conf file for app 
+ADD build/*.conf /etc/supervisor/conf.d/
 
-# add bash scripts to install app ###change from setup to build folder later###
-ADD setup/root/*.sh /root/
+# add bash scripts to install app
+ADD build/root/*.sh /root/
 
-# add Flexget yml file(s) ###change from setup to build folder later###
-ADD setup/root/*.yml /root/
+# add Flexget yml file(s)
+ADD build/root/*.yml /root/
 
-# add bash script to run flexget ###change from apps to run folder later###
-ADD apps/nobody/*.sh /home/nobody/
+# add bash script to run flexget
+ADD run/nobody/*.sh /home/nobody/
 
 # make executable and run bash scripts to install app
 RUN chmod +x /root/*.sh /home/nobody/*.sh && \
