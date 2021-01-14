@@ -1,9 +1,0 @@
-web_server: 3539
-
-tasks:
- task name:
-    rss: http://example.opensourcetv.com/torrents.xml
-    series:
-      - Open Source TV Show 1
-      - Open Source TV Show 2
-    download: /config
